@@ -1,0 +1,27 @@
+$fonts-path:                    '../fonts/';
+$images-path:                   '../images/';
+
+$basepx: 16px;
+
+$total-columns: 12;
+
+/** Colors */
+$black: #000 !default;
+$gray-100:            #f8f9fa;
+$gray-200:            #e3e8eb;
+$gray-300:            #dee2e6;
+$gray-400:            #ced4da;
+$gray-500:            #a8aaab;
+$gray-600:            #6c757d;
+$gray-700:            #474e52;
+$gray-800:            #3c3c3b;
+$gray-900:            #212529;
+$white: #fff !default;
+
+$foundation-palette: (
+  primary: #525ddc,
+  secondary: #1866ff,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #cc4b37,
+);

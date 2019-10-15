@@ -1,0 +1,56 @@
+.layout-item.hero_title {
+  padding-top: em(200px, $basepx);
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+
+  .row {
+    width: 63.75em;
+    max-width: 90%;
+  }
+
+  .background-text {
+    line-height: em(244px, 200px);
+    position: absolute;
+    left: 50%;
+    font-size: em(200px, $basepx);
+    font-weight: 700;
+    white-space: nowrap;
+    opacity: 0.05;
+    text-transform: uppercase;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: em(200px, $basepx);
+    line-height: em(244px, 200px);
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 1024px) {
+    padding-top: em(145px, $basepx);
+
+    .background-text {
+      display: none;
+    }
+
+    h1 {
+      font-size: em(120px, $basepx);
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    padding-top: em(71px, $basepx);
+
+    .background-text {
+      display: none;
+    }
+
+    h1 {
+      font-size: em(52px, $basepx);
+      line-height: em(63px, 52px);
+      margin-bottom: em(30px, 52px);
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.content-layout-item.hero_content {
+  margin: 0 auto em(25px, 12px);
+
+  @media screen and (max-width: 640px) {
+    margin-bottom: em(20px, 12px);
+  }
+
+  .row {
+    @media screen and (min-width: 641px) {
+      display: flex;
+    }
+
+    .left {
+      position: relative;
+
+      @media screen and (min-width: 641px) {
+        max-width: 50%;
+        flex: 0 0 50%;
+        align-self: center;
+      }
+
+      h2 {
+        margin: 0;
+        color: #676767;
+        font-size: em(27px, $basepx);
+        line-height: em(33px, 27px);
+        position: relative;
+        z-index: 2;
+        transform: translateX(#{em(-30px, 55px)});
+        opacity: 0;
+        transition: 0.5s;
+
+        @media screen and (min-width: 1025px) {
+          width: 125%;
+          font-size: em(55px, $basepx);
+          line-height: em(67px, 55px);
+        }
+      }
+
+      p {
+        font-size: em(15px, $basepx);
+        line-height: em(25px, 15px);
+        margin: 0;
+        font-weight: 500;
+        padding-top: em(15px, 15px);
+        padding-right: em(30px, 15px);
+        transform: translateX(#{em(-30px, 15px)});
+        opacity: 0;
+        transition: 0.5s;
+
+        @media screen and (max-width: 639px) {
+          font-size: em(15px, $basepx);
+          line-height: em(32px, 15px);
+          padding-right: 0;
+          padding-top: em(30px, 15px);
+          padding-bottom: em(30px, 15px);
+        }
+      }
+    }
+
+    .right {
+      position: relative;
+
+      @media screen and (min-width: 641px) {
+        max-width: 50%;
+        flex: 0 0 50%;
+        align-self: center;
+      }
+
+      img {
+        min-width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+        display: block;
+        opacity: 0;
+        transition: 0.5s;
+        transform: translateX(#{em(50px, 75px)});
+
+        @media screen and (min-width: 1025px) {
+          min-width: 125%;
+          max-width: 125%;
+        }
+      }
+    }
+
+    &.active {
+      .left {
+        h2 {
+          transform: none;
+          opacity: 1;
+          transition: 0.5s;
+        }
+
+        p {
+          transform: none;
+          opacity: 1;
+          transition: 0.5s 0.1s;
+        }
+      }
+
+      .right {
+        img {
+          transform: none;
+          opacity: 1;
+          transition: 0.5s 0.2s;
+        }
+      }
+    }
+  }
+}

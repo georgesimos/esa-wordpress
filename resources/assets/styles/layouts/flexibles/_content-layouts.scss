@@ -1,0 +1,12 @@
+.layout-item.content_layouts {
+  position: relative;
+
+  .row {
+    width: 63.75em;
+    max-width: 90%;
+  }
+
+  .content-layout-item:last-of-type {
+    margin-bottom: 0;
+  }
+}

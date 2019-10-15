@@ -1,0 +1,17 @@
+.row {
+  width: em(1200px, $basepx);
+  max-width: 90%;
+}
+
+@media screen and (max-width: 1024px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .row {
+    max-width: calc(100% - #{em(40px, $basepx)});
+  }
+}

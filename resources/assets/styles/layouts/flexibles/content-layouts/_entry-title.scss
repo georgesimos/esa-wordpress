@@ -1,0 +1,14 @@
+.content-layout-item.entry_title {
+  h1 {
+    margin: 0;
+    font-size: em(45px, $basepx);
+    font-weight: 300;
+    text-align: center;
+
+    span {
+      font-size: em(79px, 45px);
+      line-height: em(100px, 79px);
+      display: block;
+    }
+  }
+}

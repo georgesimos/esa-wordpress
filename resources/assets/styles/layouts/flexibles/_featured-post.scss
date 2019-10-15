@@ -1,0 +1,168 @@
+.layout-item.featured_post {
+  background: $white;
+
+  a {
+    padding: em(90px, $basepx) 0;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+    transform: translateY(#{em(50px, $basepx)});
+    opacity: 0;
+    transition: 0.5s;
+
+    @media screen and (min-width: 640px) and (max-width: 1024px) {
+      padding-left: em(30px, $basepx);
+      padding-right: em(100px, $basepx);
+      padding-top: em(60px, $basepx);
+      padding-bottom: em(60px, $basepx);
+    }
+
+    @media screen and (max-width: 639px) {
+      padding-left: em(00px, $basepx);
+      padding-right: em(00px, $basepx);
+      padding-top: em(50px, $basepx);
+      padding-bottom: em(50px, $basepx);
+    }
+  }
+
+  .content {
+    width: em(850px, $basepx);
+    max-width: 100%;
+
+    @media screen and (max-width: 639px) {
+      width: 70%;
+    }
+
+    @media screen and (max-width: 350px) {
+      width: 85%;
+    }
+
+    h2 {
+      line-height: 1em;
+      color: #000;
+      font-size: em(35px, $basepx);
+
+      @media screen and (min-width: 640px) and (max-width: 1024px) {
+        font-size: em(23px, $basepx);
+        line-height: 1em;
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: em(17px, $basepx);
+        line-height: 1em;
+      }
+    }
+
+    .entry-summary {
+      color: #000;
+      font-weight: 500;
+      font-size: em(20px, $basepx);
+      line-height: em(26px, 20px);
+
+      @media screen and (min-width: 640px) and (max-width: 1024px) {
+        font-size: em(14px, $basepx);
+        line-height: em(17px, 14px);
+        margin-top: em(16px, 14px);
+      }
+
+      @media screen and (max-width: 639px) {
+        font-size: em(14px, $basepx);
+        line-height: em(17px, 14px);
+        margin-top: em(16px, 14px);
+      }
+    }
+  }
+
+  .slide-link {
+    border-right: em(132px, $basepx) solid $black;
+    border-top: em(132px, $basepx) solid transparent;
+    border-bottom: em(132px, $basepx) solid transparent;
+    margin-top: em(-132px, $basepx);
+    transform: translateX(100%);
+    transition: 0.5s;
+
+    @media screen and (min-width: 640px) and (max-width: 1024px) {
+      transform: none;
+      border-right: em(120px, $basepx) solid $black;
+      border-top: em(120px, $basepx) solid transparent;
+      border-bottom: em(120px, $basepx) solid transparent;
+      margin-top: em(-120px, $basepx);
+    }
+
+    @media screen and (max-width: 639px) {
+      transform: none;
+      border-right: em(100px, $basepx) solid $black;
+      border-top: em(100px, $basepx) solid transparent;
+      border-bottom: em(100px, $basepx) solid transparent;
+      margin-top: em(-100px, $basepx);
+    }
+
+    @media screen and (max-width: 350px) {
+      transform: none;
+      border-right: em(50px, $basepx) solid $black;
+      border-top: em(50px, $basepx) solid transparent;
+      border-bottom: em(50px, $basepx) solid transparent;
+      margin-top: em(-50px, $basepx);
+    }
+
+    span {
+      transform: rotate(-90deg);
+      color: $white;
+      padding-right: 0;
+      position: absolute;
+      right: auto;
+      left: em(60px, 17px);
+
+      @media screen and (min-width: 640px) and (max-width: 1024px) {
+        left: em(30px, 12px);
+      }
+
+      @media screen and (max-width: 639px) {
+        left: em(30px, 12px);
+      }
+
+      @media screen and (max-width: 350px) {
+        left: em(6px, 8px);
+        font-size: em(8px, $basepx);
+        top: em(-6px, 8px);
+      }
+    }
+  }
+
+  &.active {
+    a {
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+  &.background-gray {
+    background-color: #e0e0e0;
+  }
+
+  &.background-black {
+    background-color: $black;
+
+    .content {
+      h2,
+      .entry-summary {
+        color: $white;
+      }
+    }
+
+    .slide-link {
+      border-right-color: $white;
+
+      span {
+        color: $black;
+      }
+    }
+  }
+
+  &:hover {
+    .slide-link {
+      transform: none;
+    }
+  }
+}

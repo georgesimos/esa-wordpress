@@ -1,0 +1,42 @@
+@mixin bg-cover() {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+@mixin translateY($value) {
+  transform: translateY($value);
+}
+
+@mixin translateX($value) {
+  transform: translateX($value);
+}
+
+@mixin translateXY($valueX, $valueY) {
+  transform: translate($valueX, $valueY);
+}
+
+@mixin truncate-ellipsis() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin break-word() {
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+@mixin kill-gmap() {
+  .gm-style-cc,
+  .gmnoprint,
+  .gmnoprint div {
+    display: none !important;
+  }
+}
+
+@mixin remove-last-p-margin($margin-top: 1rem) {
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}

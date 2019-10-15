@@ -1,0 +1,107 @@
+.layout-item.video-layout {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  .play-text {
+    font-size: em(150px, $basepx);
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.05);
+    position: absolute;
+    right: 10%;
+    top: 40%;
+    z-index: 2;
+    transition: 0.5s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 40%;
+      top: 50%;
+      margin-top: em(-92px, 150px);
+      width: em(183px, 150px);
+      height: em(183px, 150px);
+      transition: 0.3s;
+      background: url('#{$images-path}play-button.png') no-repeat center;
+      background-size: contain;
+      opacity: 0.05;
+    }
+  }
+
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    transition: all 0s, opacity 0.5s;
+
+    .image-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 130%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+
+  video {
+    display: block;
+    width: 100%;
+  }
+
+  &:hover {
+    .play-text {
+      color: rgba(255, 255, 255, 0.5);
+
+      &::before {
+        transform: translateX(#{em(30px, 150px)});
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &.playing {
+    .video-overlay {
+      left: -100%;
+      opacity: 0;
+      transition: all 0s 0.5s, opacity 0.5s 0s;
+    }
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 1024px) {
+    .play-text {
+      font-size: em(72px, $basepx);
+      top: 50%;
+      line-height: 1em;
+      margin-top: em(-36px, 72px);
+      color: rgba(255, 255, 255, 0.5);
+
+      &::before {
+        transform: translateX(#{em(30px, 150px)});
+        opacity: 0.5;
+      }
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .play-text {
+      font-size: em(30px, $basepx);
+      top: 50%;
+      line-height: 1em;
+      margin-top: em(-15px, 30px);
+      color: rgba(255, 255, 255, 0.5);
+
+      &::before {
+        transform: translateX(#{em(30px, 150px)});
+        opacity: 0.5;
+      }
+    }
+  }
+}

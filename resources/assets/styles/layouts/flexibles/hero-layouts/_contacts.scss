@@ -1,0 +1,219 @@
+.hero-layout.hero_contacts {
+  .contacts-info {
+    text-align: left;
+    color: #fff;
+    padding-top: em(30px, $basepx);
+    font-weight: 300;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .contacts-slide-2 {
+    position: relative;
+    color: #000;
+
+    h2 {
+      color: #000;
+      font-weight: bold;
+      font-size: em(30px, $basepx);
+      line-height: em(37px, 30px);
+    }
+
+    .contacts-info {
+      color: #000;
+
+      a {
+        color: #000;
+      }
+    }
+
+    .column {
+      padding-bottom: em(20px, $basepx);
+    }
+
+    .content {
+      padding-left: 0;
+    }
+  }
+
+  .fp-controlArrow {
+    display: none;
+  }
+
+  .fp-slidesNav {
+    ul {
+      text-align: center;
+
+      li {
+        margin: 0;
+        width: 1px;
+        height: em(15px, $basepx);
+        position: relative;
+
+        a {
+          display: block;
+          height: 100%;
+          width: 100%;
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: em(-9px, $basepx);
+            top: 0;
+            width: em(17px, $basepx);
+            height: 100%;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            transition: 0.5s;
+            transform-origin: bottom;
+          }
+
+          &.active::after {
+            transform: scaleY(1.5);
+          }
+        }
+
+        span {
+          display: none;
+        }
+
+        &:not(:last-of-type) {
+          margin-right: em(17px, $basepx);
+        }
+      }
+    }
+
+    &.bottom {
+      bottom: 100px;
+    }
+
+    @media screen and (max-width: 640px) {
+      display: none !important;
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 1024px) {
+      display: none !important;
+    }
+  }
+
+  .fp-slide {
+    position: relative;
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 1024px) {
+    .contacts-slide-2 {
+      .content {
+        padding-left: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .slide:first-of-type {
+      h2,
+      .contacts-info {
+        display: none;
+      }
+
+      h1 {
+        margin-top: em(-100px, 37px);
+      }
+
+      .slide-link {
+        top: 60%;
+        border-right: em(60px, $basepx) solid currentColor;
+        border-top: em(60px, $basepx) solid transparent;
+        border-bottom: em(60px, $basepx) solid transparent;
+        margin-top: em(-60px, $basepx);
+
+        span {
+          font-size: em(17px, $basepx);
+        }
+      }
+    }
+
+    .contacts-slide-2 {
+      .content {
+        padding-top: em(143px, $basepx);
+        padding-bottom: em(50px, $basepx);
+
+        h2 {
+          padding-top: 0;
+          font-size: em(30px, $basepx);
+        }
+
+        .contacts-info {
+          padding-top: em(40px, $basepx);
+        }
+      }
+
+      .column {
+        padding-bottom: em(15px, $basepx);
+
+        &:nth-of-type(2n) {
+          padding-bottom: em(40px, $basepx);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 820px) and (orientation: landscape) {
+    .slide:first-of-type {
+      h2,
+      .contacts-info {
+        display: none;
+      }
+
+      .slide-link {
+        top: 60%;
+        border-right: em(60px, $basepx) solid currentColor;
+        border-top: em(60px, $basepx) solid transparent;
+        border-bottom: em(60px, $basepx) solid transparent;
+        margin-top: em(-60px, $basepx);
+
+        span {
+          font-size: em(17px, $basepx);
+        }
+      }
+
+      h1 {
+        margin-top: em(-100px, 37px);
+      }
+    }
+
+    .contacts-slide-2 {
+      .content {
+        padding-top: em(143px, $basepx);
+        padding-bottom: em(50px, $basepx);
+
+        h2 {
+          padding-top: 0;
+          font-size: em(30px, $basepx);
+        }
+
+        .contacts-info {
+          padding-top: em(40px, $basepx);
+        }
+      }
+
+      .column {
+        padding-bottom: em(15px, $basepx);
+
+        &:nth-of-type(2n) {
+          padding-bottom: em(40px, $basepx);
+        }
+      }
+    }
+  }
+}

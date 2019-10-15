@@ -1,0 +1,15 @@
+.content-layout-item.lead {
+  .lead-text {
+    line-height: em(32px, 22px);
+    padding: 0;
+    margin: 0 auto em(25px, 22px);
+    font-weight: 500;
+    font-size: em(22px, $basepx);
+
+    @media screen and (max-width: 640px) {
+      line-height: em(33px, 15px);
+      margin-bottom: em(20px, 15px);
+      font-size: em(15px, $basepx);
+    }
+  }
+}

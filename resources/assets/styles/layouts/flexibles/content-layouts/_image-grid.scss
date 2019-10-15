@@ -1,0 +1,80 @@
+.content-layout-item.image_grid {
+  margin-bottom: em(25px, $basepx);
+
+  @media screen and (max-width: 640px) {
+    margin-bottom: em(20px, $basepx);
+  }
+
+  .image-grid-item {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (-ms-high-contrast: active) and (max-width: 30em), (-ms-high-contrast: none) and (max-width: 30em) {
+      display: block !important;
+    }
+
+    .image-grid-image {
+      display: block;
+      outline: none;
+
+      img {
+        min-width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    figcaption {
+      padding: 5px 10px;
+      position: relative;
+      color: $gray-600;
+      font-size: 13px;
+      font-style: italic;
+      background-color: $gray-100;
+      z-index: 10;
+      @include remove-last-p-margin();
+    }
+  }
+
+  &.image-grid-two {
+    .row {
+      display: flex;
+
+      @media screen and (max-width: 640px) {
+        display: block;
+      }
+
+      .image-grid-item {
+        max-width: 50%;
+        flex: 0 0 50%;
+
+        @media screen and (max-width: 640px) {
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
+      }
+    }
+  }
+
+  &.image-grid-three {
+    .row {
+      display: flex;
+
+      @media screen and (max-width: 640px) {
+        display: block;
+      }
+
+      .image-grid-item {
+        max-width: 33.333%;
+        flex: 0 0 33.333%;
+
+        @media screen and (max-width: 640px) {
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
+      }
+    }
+  }
+}

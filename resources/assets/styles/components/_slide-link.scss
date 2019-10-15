@@ -1,0 +1,179 @@
+.slide-link {
+  position: absolute;
+  color: #fff;
+  cursor: pointer;
+
+  &[data-goto='front'] {
+    right: 0;
+    top: 50%;
+    z-index: 3;
+    border-right: em(50px, $basepx) solid currentColor;
+    border-top: em(50px, $basepx) solid transparent;
+    border-bottom: em(50px, $basepx) solid transparent;
+    margin-top: em(-50px, $basepx);
+    transition: 0.5s;
+
+    &:hover {
+      border-right: em(70px, $basepx) solid currentColor;
+      border-top: em(70px, $basepx) solid transparent;
+      border-bottom: em(70px, $basepx) solid transparent;
+      margin-top: em(-70px, $basepx);
+    }
+
+    span {
+      color: #fff;
+      font-size: em(12px, $basepx);
+      position: absolute;
+      right: 100%;
+      white-space: nowrap;
+      text-align: right;
+      transform: translateY(-50%);
+      padding-right: em(20px, 12px);
+      font-weight: 700;
+    }
+  }
+
+  &[data-goto='back'] {
+    left: 0;
+    top: 50%;
+    z-index: 3;
+    border-left: em(50px, $basepx) solid currentColor;
+    border-top: em(50px, $basepx) solid transparent;
+    border-bottom: em(50px, $basepx) solid transparent;
+    margin-top: em(-50px, $basepx);
+    transition: 0.5s;
+
+    &:hover {
+      border-left: em(70px, $basepx) solid currentColor;
+      border-top: em(70px, $basepx) solid transparent;
+      border-bottom: em(70px, $basepx) solid transparent;
+      margin-top: em(-70px, $basepx);
+    }
+
+    span {
+      color: #fff;
+      font-size: em(12px, $basepx);
+      position: absolute;
+      left: 100%;
+      white-space: nowrap;
+      text-align: right;
+      transform: translateY(-50%);
+      padding-right: em(20px, 12px);
+      font-weight: 700;
+    }
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 1024px) {
+    &[data-goto="front"] {
+      right: 0;
+      top: 50%;
+      z-index: 3;
+      border-right: em(40px, $basepx) solid currentColor;
+      border-top: em(40px, $basepx) solid transparent;
+      border-bottom: em(40px, $basepx) solid transparent;
+      margin-top: em(-40px, $basepx);
+      transition: 0.5s;
+
+      &:hover {
+        border-right: em(50px, $basepx) solid currentColor;
+        border-top: em(50px, $basepx) solid transparent;
+        border-bottom: em(50px, $basepx) solid transparent;
+        margin-top: em(-50px, $basepx);
+      }
+    }
+
+    &[data-goto="back"] {
+      left: 0;
+      top: 50%;
+      z-index: 3;
+      border-left: em(40px, $basepx) solid currentColor;
+      border-top: em(40px, $basepx) solid transparent;
+      border-bottom: em(40px, $basepx) solid transparent;
+      margin-top: em(-40px, $basepx);
+      transition: 0.5s;
+
+      &:hover {
+        border-left: em(50px, $basepx) solid currentColor;
+        border-top: em(50px, $basepx) solid transparent;
+        border-bottom: em(50px, $basepx) solid transparent;
+        margin-top: em(-50px, $basepx);
+      }
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    &[data-goto="front"] {
+      right: 0;
+      top: 50%;
+      z-index: 3;
+      border-right: em(15px, $basepx) solid currentColor;
+      border-top: em(15px, $basepx) solid transparent;
+      border-bottom: em(15px, $basepx) solid transparent;
+      margin-top: em(-15px, $basepx);
+      transition: 0.5s;
+
+      &:hover {
+        border-right: em(15px, $basepx) solid currentColor;
+        border-top: em(15px, $basepx) solid transparent;
+        border-bottom: em(15px, $basepx) solid transparent;
+        margin-top: em(-15px, $basepx);
+      }
+    }
+
+    &[data-goto="back"] {
+      left: 0;
+      top: 50%;
+      z-index: 3;
+      border-left: em(15px, $basepx) solid currentColor;
+      border-top: em(15px, $basepx) solid transparent;
+      border-bottom: em(15px, $basepx) solid transparent;
+      margin-top: em(-15px, $basepx);
+      transition: 0.5s;
+
+      &:hover {
+        border-left: em(15px, $basepx) solid currentColor;
+        border-top: em(15px, $basepx) solid transparent;
+        border-bottom: em(15px, $basepx) solid transparent;
+        margin-top: em(-15px, $basepx);
+      }
+    }
+  }
+
+  @media screen and (max-width: 820px) and (orientation: landscape) {
+    &[data-goto="front"] {
+      right: 0;
+      top: 50%;
+      z-index: 3;
+      border-right: em(15px, $basepx) solid currentColor;
+      border-top: em(15px, $basepx) solid transparent;
+      border-bottom: em(15px, $basepx) solid transparent;
+      margin-top: em(-15px, $basepx);
+      transition: 0.5s;
+
+      &:hover {
+        border-right: em(15px, $basepx) solid currentColor;
+        border-top: em(15px, $basepx) solid transparent;
+        border-bottom: em(15px, $basepx) solid transparent;
+        margin-top: em(-15px, $basepx);
+      }
+    }
+
+    &[data-goto="back"] {
+      left: 0;
+      top: 50%;
+      z-index: 3;
+      border-left: em(15px, $basepx) solid currentColor;
+      border-top: em(15px, $basepx) solid transparent;
+      border-bottom: em(15px, $basepx) solid transparent;
+      margin-top: em(-15px, $basepx);
+      transition: 0.5s;
+
+      &:hover {
+        border-left: em(15px, $basepx) solid currentColor;
+        border-top: em(15px, $basepx) solid transparent;
+        border-bottom: em(15px, $basepx) solid transparent;
+        margin-top: em(-15px, $basepx);
+      }
+    }
+  }
+}

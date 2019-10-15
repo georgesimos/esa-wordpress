@@ -1,0 +1,31 @@
+.section-bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .section-bg {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: url('#{$images-path}menu-bg-dark.png');
+    background-size: em(165px, $basepx);
+    z-index: -1;
+  }
+
+  &.white{
+    .section-bg{
+      background: url('#{$images-path}menu-bg.png');
+      background-size: em(165px, $basepx);
+    }
+  }
+
+  &.page-bg {
+    position: fixed;
+    z-index: -1;
+  }
+}

@@ -1,0 +1,117 @@
+.layout-item.hero_cta {
+  .demo-section {
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+    height: em(400px, $basepx);
+    position: relative;
+    z-index: 1;
+
+    @media screen and (max-width: 640px) {
+      padding: em(20px, $basepx);
+      height: auto;
+    }
+
+    .section-bg-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .bg-word {
+      text-transform: uppercase;
+      color: #fff;
+      font-size: em(230px, $basepx);
+      margin: 0;
+      font-weight: 700;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      left: 40%;
+      top: 50%;
+      opacity: 0.2;
+      transform: translate(-50%, -50%);
+      line-height: 1em;
+
+      @media screen and (min-width: 640px) and (max-width: 1024px) {
+        font-size: em(150px, $basepx);
+      }
+
+      @media screen and (max-width: 640px) {
+        display: none;
+      }
+    }
+
+    h3 {
+      color: #fff;
+      font-size: em(100px, $basepx);
+      position: absolute;
+      font-weight: 300;
+      top: 50%;
+      left: 40%;
+      transform: translateY(-50%);
+      width: 50%;
+      margin: em(10px, 20px) 0 0;
+      padding: 0;
+      line-height: em(26px, 20px);
+
+      @media screen and (min-width: 640px) and (max-width: 1024px) {
+        font-size: em(80px, $basepx);
+        white-space: nowrap;
+      }
+
+      @media screen and (max-width: 640px) {
+        font-size: 0px;
+        white-space: nowrap;
+        position: static;
+        width: 100%;
+        transform: none;
+        top: 0;
+        left: 0;
+      }
+
+      span {
+        font-size: em(40px, 100px);
+        line-height: em(49px, 40px);
+        font-weight: 300;
+        display: inline-block;
+        position: relative;
+        top: em(-80px, 40px);
+        left: em(-124px, 40px);
+
+        @media screen and (min-width: 640px) and (max-width: 1024px) {
+          font-size: em(30px, 80px);
+        }
+
+        @media screen and (max-width: 640px) {
+          font-size: 25px;
+          top: 0;
+          left: 0;
+          width: 100%;
+          text-align: center;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          width: 105%;
+          height: 8px;
+          background: #fff;
+          right: 0;
+
+          @media screen and (min-width: 640px) and (max-width: 1024px) {
+            height: 3px;
+          }
+
+          @media screen and (max-width: 640px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+.page-style-dark {
+  background: $black;
+}
+
+.page-style-white {
+  background-color: $white;
+}
+
+.pt-sm {
+  padding-top: em(50px, $basepx);
+
+  @media screen and (min-width: 640px) and (max-width: 1024px) {
+    padding-top: em(25px, $basepx);
+  }
+
+  @media screen and (max-width: 640px) {
+    padding-top: em(25px, $basepx);
+  }
+}
+
+.pb-sm {
+  padding-bottom: em(50px, $basepx);
+
+  @media screen and (min-width: 640px) and (max-width: 1024px) {
+    padding-bottom: em(25px, $basepx);
+  }
+
+  @media screen and (max-width: 640px) {
+    padding-bottom: em(25px, $basepx);
+  }
+}
+
+.pt-default {
+  padding-top: em(100px, $basepx);
+
+  @media screen and (min-width: 640px) and (max-width: 1024px) {
+    padding-top: em(50px, $basepx);
+  }
+
+  @media screen and (max-width: 640px) {
+    padding-top: em(50px, $basepx);
+  }
+}
+
+.pb-default {
+  padding-bottom: em(100px, $basepx);
+
+  @media screen and (min-width: 640px) and (max-width: 1024px) {
+    padding-bottom: em(50px, $basepx);
+  }
+
+  @media screen and (max-width: 640px) {
+    padding-bottom: em(50px, $basepx);
+  }
+}
+
+.pt-lg {
+  padding-top: em(200px, $basepx);
+
+  @media screen and (min-width: 640px) and (max-width: 1024px) {
+    padding-top: em(140px, $basepx);
+  }
+
+  @media screen and (max-width: 640px) {
+    padding-top: em(70px, $basepx);
+  }
+}
+
+.pb-lg {
+  padding-bottom: em(200px, $basepx);
+
+  @media screen and (min-width: 640px) and (max-width: 1024px) {
+    padding-bottom: em(140px, $basepx);
+  }
+
+  @media screen and (max-width: 640px) {
+    padding-bottom: em(70px, $basepx);
+  }
+}

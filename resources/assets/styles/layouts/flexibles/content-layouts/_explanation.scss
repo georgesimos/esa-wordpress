@@ -1,0 +1,123 @@
+.content-layout-item.explanation {
+  color: #000;
+  position: relative;
+  z-index: 2;
+
+  .text-column {
+    width: 50%;
+
+    @media screen and (min-width: 640px) and (max-width: 1024px) {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 640px) {
+      width: 100%;
+    }
+  }
+
+  .row {
+    display: flex;
+
+    @media screen and (min-width: 640px) and (max-width: 1024px) {
+      flex-wrap: wrap;
+      width: em(520px, $basepx);
+    }
+
+    @media screen and (max-width: 640px) {
+      flex-wrap: wrap;
+      width: em(520px, $basepx);
+    }
+
+    & > div {
+      align-self: center;
+    }
+
+    & > div:first-of-type {
+      transform: translateX(#{em(-50px, $basepx)});
+      opacity: 0;
+      transition: 0.5s;
+
+      @media screen and (min-width: 640px) and (max-width: 1024px) {
+        order: 2;
+        text-align: center;
+        padding-top: em(60px, $basepx);
+      }
+
+      @media screen and (max-width: 640px) {
+        order: 2;
+        text-align: center;
+        padding-top: em(40px, $basepx);
+      }
+    }
+
+    & > div:last-of-type {
+      transform: translateX(#{em(50px, $basepx)});
+      opacity: 0;
+      transition: 0.5s;
+    }
+  }
+
+  h2 {
+    margin: 0;
+    font-size: em(64px, $basepx);
+    line-height: em(78px, 64px);
+
+    @media screen and (max-width: 640px) {
+      font-size: em(49px, $basepx);
+    }
+
+    @media screen and (max-width: 350px) {
+      font-size: em(40px, $basepx);
+    }
+
+    span {
+      font-weight: 300;
+    }
+  }
+
+  h3 {
+    font-size: em(35px, $basepx);
+    line-height: 1em;
+    font-weight: 700;
+
+    @media screen and (max-width: 640px) {
+      font-size: em(34px, $basepx);
+      line-height: em(35px, 34px);
+      margin-top: 0;
+    }
+
+    span {
+      font-weight: 300;
+    }
+  }
+
+  h4 {
+    font-size: em(20px, $basepx);
+    line-height: em(22px, 20px);
+    font-weight: 500;
+    margin: 0;
+    margin-top: em(20px, 20px);
+
+    @media screen and (max-width: 640px) {
+      font-size: em(20px, $basepx);
+      line-height: em(22px, 20px);
+      margin-top: em(15px, 20px);
+    }
+  }
+
+  .entry-content {
+    font-size: em(13px, $basepx);
+    line-height: em(14px, 13px);
+    font-weight: 300;
+    margin: 0;
+    margin-top: em(20px, 13px);
+  }
+
+  &.active {
+    div:first-of-type,
+    div:last-of-type {
+      transform: none;
+      opacity: 1;
+    }
+  }
+}

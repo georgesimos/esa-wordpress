@@ -1,0 +1,32 @@
+.page-style-dark {
+  color: $white;
+}
+
+.inner-page {
+  h2 {
+    font-size: em(35px, $basepx);
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    
+    span {
+      font-weight: 300;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    padding: 0;
+    font-size: em(20px, $basepx);
+    line-height: em(26px, 20px);
+    margin-top: em(10px, 20px);
+    font-weight: 500;
+  }
+
+  p {
+    font-size: em(13px, $basepx);
+    line-height: em(18px, 13px);
+    margin: 0;
+    margin-top: em(15px, 13px);
+  }
+}
