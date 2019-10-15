@@ -1,0 +1,12 @@
+.hero-layout h1 {
+    font-size: 4em;
+}
+.hero-layout h2 {
+    font-size: 1.6em;
+}
+
+.layout-item.hero_title h1 {
+    font-size: 8.5em;
+    margin: 25px auto;
+    text-align: center;
+}

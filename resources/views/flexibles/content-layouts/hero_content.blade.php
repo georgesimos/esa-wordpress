@@ -6,6 +6,7 @@
       'title' => get_sub_field( 'title' ),
       'content' => get_sub_field( 'content' ),
       'image' => get_sub_field( 'image' ),
+      'gallery' => get_sub_field( 'gallery' ),
     ];
 
     $classes = [
@@ -14,7 +15,7 @@
     ];
   @endphp
 
-  @if( ! empty( $fields['title'] ) || ! empty( $fields['content'] ) || ! empty( $fields['image'] ) )
+  @if( ! empty( $fields['title'] ) || ! empty( $fields['content'] ) || ! empty( $fields['image']  ) )
     <section id="{{ $fields['layout_id'] }}" class="{{ implode( ' ', $classes ) }}">
       <div class="row elements-in">
         <div class="left">
@@ -33,6 +34,13 @@
         <div class="right">
           @if( ! empty( $fields['image'] ) )
             {!! \App\get_responsive_attachment( $fields['image']['id'], 'esa-thumbnail-lg' ) !!}
+          @endif
+          @if( ! empty( $fields['gallery'] ) )
+              <div class="gallery">
+                @foreach( $fields['gallery'] as $image )
+                {!! \App\get_responsive_attachment( $image['id'], 'esa-thumbnail-lg' ) !!}
+                @endforeach
+              </div>
           @endif
         </div>
       </div>
