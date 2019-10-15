@@ -12,6 +12,7 @@ use Roots\Sage\Template\BladeProvider;
  */
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('esa/main.css', asset_path('styles/main.css'), false, null);
+    wp_enqueue_style('esa/style.css', asset_path('styles/style.css'), false, null);
     wp_register_script( 'esa/main.js', asset_path( 'scripts/main.js' ), [ 'jquery', 'jquery-effects-core' ], null, true );
     wp_localize_script( 'esa/main.js', 'esaGlobals', [
             'ajax_url'       => admin_url( 'admin-ajax.php' ),
