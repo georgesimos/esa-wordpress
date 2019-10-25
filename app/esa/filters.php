@@ -12,6 +12,6 @@ add_action( 'get_header_after', function () {
 /**
  * Awwards banner
  */
-add_action( 'get_footer', function () {
-    echo \App\template( 'partials.awwards' );
-} );
+// add_action( 'get_footer', function () {
+//     echo \App\template( 'partials.awwards' );
+// } );

@@ -8,7 +8,7 @@
       'sub_title' => get_sub_field( 'sub_title' ),
       'featured_contacts' => get_sub_field( 'featured_contacts' ),
       'contacts_title' => get_sub_field( 'contacts_title' ),
-      'contacts' => get_sub_field( 'contacts' ),
+      'contacts' => get_sub_field( 'contacts' )
     ];
 
     $classes = [
@@ -34,11 +34,18 @@
         @endif
 
         @if( ! empty( $fields['featured_contacts'] ) )
-          <div class="contacts-info">
+          <div class="contacts-info row">
             @foreach( $fields['featured_contacts'] as $contact )
-
+ 			<div class="small-12 large-3 columns">
               @if( ! empty( $contact['name'] ) )
                 <strong>{{ $contact['name'] }}</strong><br>
+              @endif
+			  
+			  @if( ! empty( $contact['address'] ) )
+               <div>
+				   {!! $contact['address'] !!}
+				   <br>
+			  </div>
               @endif
 
               @if( ! empty( $contact['email'] ) )
@@ -48,7 +55,9 @@
               @if( ! empty( $contact['phone'] ) )
                 <a href="tel:{{ $contact['phone'] }}">{{ $contact['phone'] }}</a><br><br>
               @endif
+		  </div>
             @endforeach
+           
           </div>
         @endif
       </div>
@@ -75,10 +84,18 @@
         @if( ! empty( $fields['contacts'] ) )
         <div class="contacts-info row">
           @foreach( $fields['contacts'] as $contact )
-            <div class="small-12 medium-4 column">
+            <div class="small-12 medium-3 column">
               @if( ! empty( $contact['name'] ) )
                 <strong>{{ $contact['name'] }}</strong><br>
               @endif
+				
+			 @if( ! empty( $contact['address'] ) )
+               <div>
+				   {!! $contact['address'] !!}
+				   <br>
+			  </div>
+              @endif
+
 
               @if( ! empty( $contact['email'] ) )
                 <a href="mailto:{{ $contact['email'] }}">{{ $contact['email'] }}</a><br>
@@ -89,6 +106,7 @@
               @endif
             </div>
           @endforeach
+                      
         </div>
         @endif
       </div>

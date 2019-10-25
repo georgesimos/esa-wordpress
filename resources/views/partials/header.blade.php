@@ -17,6 +17,12 @@
       {{ $request_demo['title'] }}
     </a>
   @endif
+  @if( ! empty( $login_link = get_field( 'esa_login', 'option' ) ) )
+    @php $target = empty( $login_link['target'] ) ? '' : ' target="' . $login_link['target'] . '" rel="nofollow"' @endphp
+    <a class="login-link" href="{{ $login_link['url'] }}" title="{{ $login_link['title'] }}"{!! $target !!}>
+      {{ $login_link['title'] }}
+    </a>
+  @endif
 </nav>
 
 <div class="menu-wrapper">

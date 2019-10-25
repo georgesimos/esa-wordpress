@@ -11,6 +11,7 @@
       'lead_bottom' => get_sub_field( 'lead_bottom' ),
       'content_bottom' => get_sub_field( 'content_bottom' ),
       'image' => get_sub_field( 'image' ),
+      'slick_slider' => get_sub_field( 'slick_slider' ),
       'layout_style' => get_sub_field( 'layout_style' ) ? get_sub_field( 'layout_style' ) : 'column',
       'image_position' => get_sub_field( 'image_position' ) ? get_sub_field( 'image_position' ) : 'left',
     ];

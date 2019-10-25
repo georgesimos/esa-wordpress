@@ -1,12 +1,193 @@
-.hero-layout h1 {
-    font-size: 4em;
-}
-.hero-layout h2 {
-    font-size: 1.6em;
+.layout-item.hero_title h1 {
+  font-size: 8.5em;
+  margin: 25px auto;
+  text-align: center;
 }
 
-.layout-item.hero_title h1 {
-    font-size: 8.5em;
-    margin: 25px auto;
-    text-align: center;
+.menu-wrapper ul .menu-link {
+  font-size: 4em;
+}
+
+.fp-viewing-Contact-0 #fp-nav.left {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-layout h1 {
+    font-size: 3.5em;
+  }
+  .hero-layout h2 {
+    font-size: 1.5em;
+  }
+  .layout-item.media_block_column.elements-in {
+    overflow: hidden;
+    margin: 100px 0;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 640px) {
+  .hero-layout h1 {
+    font-size: 3em;
+  }
+  .hero-layout h2 {
+    font-size: 1em;
+  }
+  .menu-wrapper ul .menu-link {
+    font-size: 2.8125em;
+    line-height: 1.33333em;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .layout-item.hero_title h1 {
+    font-size: 2.6em;
+    line-height: 1.21154em;
+    margin-bottom: 0.57692em;
+  }
+
+  .menu-wrapper ul .menu-link {
+    font-size: 1.75em;
+    line-height: 1.60714em;
+  }
+}
+
+/* Slick Carousel */
+.wpsisac-slick-slider.design-1 .slick-arrow {
+  top: 0 !important;
+  height: 100%;
+  width: 5%;
+}
+.wpsisac-slick-slider.design-1 .slick-dots {
+  opacity: 0;
+}
+
+/* Gravity Forms */
+
+/*** MAIN GRAVITY WRAPPER ***/
+.gform_wrapper {
+  padding: 5%;
+}
+/*** REMOVE LABEL ON FIELDS USING PLACEHOLDER ***/
+.gform_wrapper .top_label .gfield_label,
+.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
+  display: none;
+}
+/*** FIELD STYLING ***/
+.gform_wrapper ul.gform_fields li.gfield,
+.gform_wrapper .top_label li.gfield.gf_right_half {
+  padding-right: 0;
+}
+input[type="text"],
+textarea,
+.gform_confirmation_message {
+  background: #eee;
+  border: none;
+  border-radius: 0;
+  color: rgba(0, 0, 0, 0.7) !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+  padding: 17px 15px !important;
+  width: 100%;
+}
+.gform_confirmation_message {
+  margin-bottom: 100px;
+  padding: 40px 15px !important;
+}
+/*** FIELD FOCUS STYLING ***/
+input[type="text"]:focus,
+input.text:focus,
+input.title:focus,
+textarea:focus {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+}
+/*** MESSAGE BOX TRANSITION ***/
+.gform_wrapper textarea {
+  margin-top: 6px;
+  height: 10em;
+  transition: height 0.3s ease-out;
+}
+/*** MESSAGE BOX FOCUS HEIGHT ***/
+.gform_wrapper textarea:focus {
+  height: 25em;
+}
+/*** BUTTON STYLING ***/
+.gform_wrapper .gform_footer button.btn {
+  width: 100%;
+}
+.gform_wrapper .gform_footer button.btn {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 10px 12px;
+  border-radius: 0;
+  background: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  transition: box-shadow 0.2s ease-in-out;
+}
+/*** BUTTON HOVER STYLING ***/
+.gform_wrapper .gform_footer button.btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+}
+/*** PLACEHOLDER ***/
+::-webkit-input-placeholder {
+  /* Chrome */
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+:-moz-placeholder {
+  /* Firefox 4 - 18 */
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+
+/*** ERROR STYLING ***/
+
+.gform_wrapper li.gfield.gfield_error,
+.gform_wrapper
+  li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+  background-color: transparent;
+  margin-bottom: 0 !important;
+  border-top: 0;
+  border-bottom: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+  box-sizing: border-box;
+}
+
+.gform_wrapper div.validation_error {
+  color: rgb(206, 0, 0);
+  border-top: 2px solid rgb(206, 0, 0);
+  border-bottom: 2px solid rgb(206, 0, 0);
+  display: none;
+}
+.gform_wrapper .validation_message {
+  color: rgb(206, 0, 0);
+  font-size: 10px;
+}
+.gform_wrapper .field_description_below .gfield_description {
+  padding-top: 5px;
+}
+
+/*** Single Post STYLING ***/
+.post-content {
+  padding: 5em 0;
+}
+.layout-item.hero_title.is_post h1 {
+  font-size: 2.2em;
+}
+.layout-item.hero_title.is_post .background-text {
+  font-size: 9em;
+  line-height: .5;
+  opacity: .03;
 }

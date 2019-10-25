@@ -1,8 +1,10 @@
 <section id="{{ $fields['layout_id'] }}" class="{{ implode( ' ', $classes ) }}">
   @if( 'left' === $fields['image_position'] )
     <div class="image-wrapper bw">
-      @if( ! empty( $fields['image'] ) )
-       {!! \App\get_responsive_attachment( $fields['image']['id'], 'esa-thumbnail-lg' ) !!}
+      @if( ! empty( $fields['slick_slider'] ) )
+        {!! do_shortcode($fields['slick_slider']) !!}
+      @elseif ( ! empty( $fields['image'] ) )
+        {!! \App\get_responsive_attachment( $fields['image']['id'], 'esa-thumbnail-lg' ) !!}
       @endif
     </div>
   @endif
@@ -27,9 +29,11 @@
 
   @if( 'right' === $fields['image_position'] )
     <div class="image-wrapper bw">
-      @if( ! empty( $fields['image'] ) )
-        {!! \App\get_responsive_attachment( $fields['image']['id'], 'esa-thumbnail-lg' ) !!}
-      @endif
+    @if( ! empty( $fields['slick_slider'] ) )
+      {!! do_shortcode($fields['slick_slider']) !!}
+    @elseif ( ! empty( $fields['image'] ) )
+      {!! \App\get_responsive_attachment( $fields['image']['id'], 'esa-thumbnail-lg' ) !!}
+    @endif
     </div>
   @endif
 </section>
